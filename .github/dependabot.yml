@@ -8,7 +8,7 @@ updates:
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
     registries:
       - mcr
 
@@ -16,3 +16,5 @@ registries:
   mcr:
     type: "docker-registry"
     url: "https://mcr.microsoft.com"
+    username: "${{ secrets.MCR_USERNAME }}"
+    password: "${{ secrets.MCR_PASSWORD }}"
